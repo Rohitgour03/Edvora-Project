@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');
+
+/* ************** CSS Reset ************** */
+
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* Remove default margin */
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+
+/* Set core root defaults */
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+
+/* Set core body defaults */
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+
+/* A elements that don't have a class get default styles */
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+
+/* Make images easier to work with */
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* Inherit fonts for inputs and buttons */
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* ************* Custom CSS ************* */
+
+:root {
+    --Very-dark-black: #101010;
+    --Dark-black: #171717;
+    --Gray-1: #292929;
+    --Gray-2: #D0CBCB;
+    --Gray-3: #CFCFCF;
+    --Gray-4: #F2F2F2;
+    --White: #FFFFFF;
+}
+
+body {
+    color: var(--Gray-4);
+    background-color: var(--Gray-1);
+    font-family: 'Inter', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--Gray-2);
+}
+
+
+/* Header Section */
+
+header {
+    background-color: var(--Dark-black);
+}
+
+
+/* Navigation Bar */
+
+nav {
+    width: 90%;
+    margin: 0 auto;
+    padding-block: 1.25rem;
+}
+
+nav,
+main {
+    max-width: 1366px;
+}
+
+
+/* Logo */
+
+#logo {
+    font-size: 2.25rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+nav,
+.user-profile-ctn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Username */
+
+.user-name {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+
+/* User's Image container */
+
+.user-img-ctn {
+    width: 44px;
+    height: 44px;
+    margin-left: 1.5rem;
+    border-radius: 50px;
+    background-color: #fff;
+}
+
+
+/* Main Section */
+
+main {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+
+/* Category container */
+
+.category-ctn {
+    padding: 1.875rem 0;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+
+/* Category text */
+
+.category {
+    position: relative;
+}
+
+
+/* Active Category */
+
+.active-category {
+    font-weight: bold;
+    color: var(--White);
+}
+
+
+/* Active Category underline decoration */
+
+.active-category::after {
+    content: "";
+    position: absolute;
+    bottom: -0.25rem;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--White);
+}
+
+
+/* Filter container */
+
+.filter-ctn {
+    display: flex;
+    align-items: center;
+}
+
+
+/* icon container */
+
+.filter-ctn svg {
+    margin-right: 0.5rem;
+}
+
+
+/* .icon-ctn {
+    width: 1.125rem;
+    height: 0.755rem;
+    margin-right: 0.5rem;
+}
+
+.icon-ctn span.bar {
+    width: 100%;
+    height: 2px;
+    background: #fff;
+} */
+
+
+/* Rides container */
+
+.rides-ctn {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+/* Ride card container */
+
+.ride-ctn {
+    padding: 1.5rem 1.875rem;
+    border-radius: 10px;
+    background: var(--Dark-black);
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.ride-map {
+    width: 100%;
+    height: 148px;
+    background: var(--Gray-1);
+}
+
+.ride-info-ctn p span.value {
+    color: var(--White);
+    font-weight: 500;
+}
+
+
+/* Tags container */
+
+.tags-ctn {
+    display: flex;
+    gap: 1.375rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    font-size: 0.75rem;
+    font-weight: 500;
+    background: #0000008f;
+    padding: 4px 10px;
+    border-radius: 1rem;
+}
+
+@media screen and (min-width: 700px) {
+    .category-ctn {
+        gap: 2.75rem;
+    }
+    .filter-ctn {
+        margin-left: auto;
+    }
+    .ride-ctn {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 2.75rem;
+    }
+    .ride-map {
+        width: 296px;
+        height: 148px;
+        background: var(--Gray-1);
+    }
+    .tags-ctn {
+        margin-left: auto;
+    }
+}
