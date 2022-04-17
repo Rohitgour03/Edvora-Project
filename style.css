@@ -172,7 +172,9 @@ nav,
     height: 44px;
     margin-left: 1.5rem;
     border-radius: 50px;
-    background-color: #fff;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
@@ -199,6 +201,12 @@ main {
 
 .category {
     position: relative;
+    margin-right: 0.25rem;
+    transition: all 300ms;
+}
+
+.category:hover {
+    color: var(--White);
 }
 
 
@@ -228,6 +236,8 @@ main {
 .filter-ctn {
     display: flex;
     align-items: center;
+    position: relative;
+    cursor: pointer;
 }
 
 
@@ -235,6 +245,46 @@ main {
 
 .filter-ctn svg {
     margin-right: 0.5rem;
+}
+
+.filter-dropdown-ctn {
+    width: 228px;
+    padding: 1.8rem;
+    background: #131313;
+    border-radius: 15px;
+    position: relative;
+    left: calc(100% - 228px);
+    display: none;
+    z-index: 100;
+}
+
+.active-filter-btn {
+    display: block;
+}
+
+.gray {
+    color: #A5A5A5;
+}
+
+.gray-line {
+    width: 100%;
+    height: 2px;
+    margin-top: 0.5rem;
+    background: #A5A5A5;
+}
+
+#state,
+#city {
+    display: block;
+    border: none;
+    margin-top: 1rem;
+    border-radius: 4.5px;
+    background: #232323;
+    color: #fff;
+    font-weight: normal;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+    width: 100%;
 }
 
 
@@ -268,14 +318,17 @@ main {
     background: var(--Dark-black);
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
     align-items: flex-start;
-    flex-direction: column;
 }
 
 .ride-map {
-    width: 100%;
-    height: 148px;
     background: var(--Gray-1);
+}
+
+.ride-map img {
+    overflow: hidden;
+    border-radius: 5px;
 }
 
 .ride-info-ctn p span.value {
@@ -308,16 +361,13 @@ main {
         margin-left: auto;
     }
     .ride-ctn {
-        flex-direction: row;
-        align-items: flex-start;
         gap: 2.75rem;
     }
     .ride-map {
-        width: 296px;
-        height: 148px;
         background: var(--Gray-1);
     }
     .tags-ctn {
+        flex-wrap: wrap;
         margin-left: auto;
     }
 }
