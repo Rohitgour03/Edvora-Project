@@ -32,6 +32,8 @@ Users should be able to:
 
 ![](./Images/screenshot.png)
 
+![](./Images/Edvora%20%E2%80%94%20Mozilla%20Firefox%202022-04-17%2015-19-53.mp4)
+
 ## My process
 
 ### Built with

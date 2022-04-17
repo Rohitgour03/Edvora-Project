@@ -252,10 +252,12 @@ main {
     padding: 1.8rem;
     background: #131313;
     border-radius: 15px;
-    position: relative;
-    left: calc(100% - 228px);
+    position: absolute;
+    left: calc(100% - 310px);
+    top: 25%;
     display: none;
     z-index: 100;
+    box-shadow: -10px 10px 100px var(--Gray-1);
 }
 
 .active-filter-btn {
