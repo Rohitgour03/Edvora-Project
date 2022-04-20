@@ -48,7 +48,7 @@ As I am currently learning the React.js Thats why I build this entire project us
 
 ## Author
 
-- Githun - [Rohit Gour](https://github.com/Rohitgour03)
+- Github - [Rohit Gour](https://github.com/Rohitgour03)
 - Codepen - [@Rohitgour03](https://codepen.io/rohitgour03)
 - Twitter - [@Rohitgour03](https://www.twitter.com/Rohitgour03)
 
